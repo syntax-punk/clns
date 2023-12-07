@@ -1,6 +1,6 @@
 type ClassNameRecord = Record<string, boolean>;
 
-export function classnames(...values: (string | string[] | ClassNameRecord | undefined)[]): string {
+function classnames(...values: (string | string[] | ClassNameRecord | undefined)[]): string {
   
   const result = values
     .filter(Boolean) // filter out undefined, null, false, 0, NaN, ''
@@ -25,3 +25,6 @@ export function classnames(...values: (string | string[] | ClassNameRecord | und
   
   return result;
 }
+
+export default classnames;
+export { classnames };
