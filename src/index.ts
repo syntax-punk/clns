@@ -1,13 +1,13 @@
 type ClassNameRecord = Record<string, boolean>;
 
-function classnames(...values: (string | string[] | ClassNameRecord | undefined)[]): string {
+function clns(...values: (string | string[] | ClassNameRecord | undefined)[]): string {
   
   const result = values
     .filter(Boolean) // filter out undefined, null, false, 0, NaN, ''
     .reduce<string[]>((classes, next) => {
       if (Array.isArray(next)) {
         // handle arrays of classnames using recursion
-        classes.push(classnames(...next));
+        classes.push(clns(...next));
       } else if (typeof next === 'object') {
         // handle objects (ClassNameRecord) using for...of with Object.entries
         for (const [key, value] of Object.entries(next)) {
@@ -26,5 +26,5 @@ function classnames(...values: (string | string[] | ClassNameRecord | undefined)
   return result;
 }
 
-export default classnames;
-export { classnames };
+export default clns;
+export { clns };

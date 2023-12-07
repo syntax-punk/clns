@@ -1,25 +1,26 @@
-# clssnms
+# clns - "_(class names)_"
 
-> Unbearably easy-to-use JavaScript tool designed for combining classNames based on certain conditions.
+> An unbearably easy-to-use JavaScript tool designed for combining classNames based on certain conditions.
 
 #### Install it from the [npm registry](https://www.npmjs.com/):
 ```bash
-npm install clssnms
+npm install clns
 ```
 
 #### Usage
 
 ```js
-import clssnms from 'clssnms';
+import clns from 'clns';
 
-const names = clssnms('foo', 'bar', 'baz');
+const names = clns('foo', 'bar', 'baz');
 
 console.log(names); // 'foo bar baz'
 ```
 
 ```js
+import clns from 'clns';
 
-const conditionalNames = clssnms({
+const conditionalNames = clns({
   'foo': true,
   'bar': false,
   'baz': true,

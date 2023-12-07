@@ -1,5 +1,5 @@
 {
-  "name": "clssnms",
+  "name": "clns",
   "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
@@ -13,16 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/syntax-punk/clssnms.git"
+    "url": "git+https://github.com/syntax-punk/clns.git"
   },
   "keywords": [
     "react",
-    "clssnms",
+    "clns",
     "module",
     "css",
     "classnames",
     "classname",
     "classes",
+    "names",
     "util",
     "utility"
   ],
