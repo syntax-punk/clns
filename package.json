@@ -18,12 +18,16 @@
   "keywords": [
     "react",
     "clns",
-    "module",
     "css",
     "classnames",
     "classname",
     "classes",
+    "join",
     "names",
+    "module",
+    "modulecss",
+    "tailwind",
+    "tailwindcss",
     "util",
     "utility"
   ],
