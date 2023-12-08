@@ -1,29 +1,25 @@
 type ClassNameRecord = Record<string, boolean>;
 
 function clns(...values: (string | string[] | ClassNameRecord | undefined)[]): string {
-  
-  const result = values
-    .filter(Boolean) // filter out undefined, null, false, 0, NaN, ''
-    .reduce<string[]>((classes, next) => {
+
+  return values
+    .filter(Boolean)
+    .reduce<string[]>((curr, next) => {
       if (Array.isArray(next)) {
-        // handle arrays of classnames using recursion
-        classes.push(clns(...next));
+        curr.push(clns(...next));
       } else if (typeof next === 'object') {
-        // handle objects (ClassNameRecord) using for...of with Object.entries
-        for (const [key, value] of Object.entries(next)) {
-          if (value) {
-            classes.push(key);
+        for (const [k, v] of Object.entries(next)) {
+          if (v) {
+            curr.push(k);
           }
         }
       } else if (typeof next === 'string') {
-        classes.push(next);
+        curr.push(next);
       }
 
-      return classes;
+      return curr;
     }, [])
     .join(' ');
-  
-  return result;
 }
 
 export default clns;
