@@ -1,6 +1,10 @@
-# clns - "_(class names)_"
+# clns - "class names"
 
-> An unbearably easy-to-use JavaScript tool designed for combining classNames based on certain conditions.
+> An unbearably easy-to-use TypeScript-optimized tool designed for combining classNames based on certain conditions or whatnot.
+
+#### Why clns:
+- **TypeScript-First**: Built with TypeScript users in mind for enhanced type safety and developer experience.
+- **Minimalist Design**: The ultimate in simplicity, offering just what you need and nothing more.
 
 #### Install it from the [npm registry](https://www.npmjs.com/):
 ```bash
@@ -28,3 +32,5 @@ const conditionalNames = clns({
 
 console.log(conditionalNames); // 'foo baz'
 ```
+
+Leverage the simplicity and power of CLNS to manage your classNames in a more readable and maintainable way.
